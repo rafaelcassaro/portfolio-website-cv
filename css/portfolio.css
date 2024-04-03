@@ -1,0 +1,102 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+.portfolio__title {
+  color: var(--color-primary);
+  margin: 6rem 0 4rem 0;
+  font-size: 4rem;
+}
+
+.swiper {
+  width: 50%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: block;
+  top: 60%;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-pagination {
+  position: initial;
+  margin-top: 1em;
+}
+
+.swiper-pagination-bullet {
+  background: rgb(177, 177, 177) !important;
+  border-radius: 0.5rem !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: blue !important;
+  border-radius: 0.5rem !important;
+}
+
+.horizontal-list {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  background-color: #e6e6e6;
+}
+
+.horizontal-list li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.portfolio_img {
+  width: 100%;
+  height: auto; /* Mantém a proporção da imagem */
+  cursor: pointer;
+}
+
+.botao-hiden {
+  padding: 0; /* Remove o preenchimento interno do botão */
+  border: none; /* Remove a borda do botão */
+  background: none; /* Remove o plano de fundo do botão */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  width: 15em;
+}
+
+
+
+@media screen and (max-width: 1510px) {
+  .swiper {
+    width: auto;
+  }
+  .carousel__container {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .carousel__container {
+    margin: 0 1rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+    top: 1%;
+  }
+}
+
+@media screen and(max-width: 650px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+    top: 1%;
+  }
+
+  .portfolio__title {
+    font-size: 0.5rem;
+  }
+}

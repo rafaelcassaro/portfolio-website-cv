@@ -1,0 +1,102 @@
+/* -------------------------CARD EXPANSAO------------------------*/
+
+.portfolio_card {
+  display: flex;
+  align-items: start;
+  text-align: start;
+  width: 55rem;
+  margin: 1em auto;
+  gap: 2rem;
+  padding: 2em 3em;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio_card__text_container {
+  margin: auto 0;
+}
+
+.portfolio_card__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.portfolio_card__text {
+  padding: 1rem 0;
+}
+
+.portfolio_card__button {
+  margin-right: 0.5rem;
+}
+
+.portfolio_card__technologies_title {
+  color: var(--color-secundary);
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+#img-portfio-card {
+  width: 25rem;
+  height: 25rem;
+  border: 1px solid var(--color-secundary);
+}
+
+.portfolio_card__button {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: white;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.3rem;
+  cursor: pointer;
+  width: 10rem;
+}
+
+.card_img{
+  width: 20%;
+  height: auto;
+}
+
+@media screen and (max-width: 1070px) {
+  .portfolio_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+  }
+
+  #img-portfio-card {
+    display: none;
+    
+  }
+
+  .portfolio_card__text {
+    text-align: left;
+    margin: 0 15%;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+    .portfolio_card__title {
+        font-size: 1.5rem;
+      }
+
+      .portfolio_card__technologies_title {
+        font-size: 1.2rem;
+
+      }
+    
+    .portfolio_card__text {
+        text-align: left;
+        margin: 0;
+      }
+}
+

@@ -1,0 +1,103 @@
+.presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tertiary);
+  height: 100vh;
+}
+
+.presentation__text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-perfil {
+  margin-left: 3rem;
+  width: 20%;
+}
+
+.presentation__text_title {
+  color: var(--presentation);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.presentation__text_title_name {
+  font-family: var(--font);
+  color: var(--presentation);
+  font-size: 3.3rem;
+  font-weight: 600;
+}
+
+.presentation__text_title_job {
+  font-family: var(--font-secundary);
+  color: var(--presentation);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.presentation__links {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.presentation__socials {
+  text-decoration: none;
+  margin-top: 9px;
+  margin-right: 0.5rem;
+}
+
+.presentation__socials_img{
+  width: 42px;
+  height: 42px;
+}
+
+
+.linkedin-icon:hover{
+  content: url("../imgs/linkedin.png");
+  width: 64px;
+  height: 64px;
+}
+
+.github-icon:hover{
+  content: url("../imgs/github.png");
+  width: 64px;
+  height: 64px;
+}
+
+.presentation__button {
+  font-size: 1.1rem;
+  /* color: rgb(158, 158, 226); */
+  color: var(--presentation);
+  background: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px solid;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:  910px)  {
+  
+  .presentation{
+    padding: 0.5rem;
+  }
+  #img-perfil {
+    display: none;
+  }
+  .presentation__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width:  550px)  {
+  .presentation__text {
+    margin: 0 auto;
+  }
+}
