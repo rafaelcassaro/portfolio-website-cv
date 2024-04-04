@@ -4,6 +4,7 @@
   text-align: center;
   background-color: #f0f0f0;
   height: 100vh;
+  z-index: 1;
 }
 
 .portfolio__title {
@@ -85,7 +86,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
-    top: 1%;
+    color: transparent;
   }
 }
 
@@ -93,8 +94,18 @@
   .swiper-button-prev,
   .swiper-button-next {
     display: none;
-    top: 1%;
+    color: transparent;
   }
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 0;
+    text-transform: none ;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 0;
+    color: transparent;
+}
 
   .portfolio__title {
     font-size: 0.5rem;

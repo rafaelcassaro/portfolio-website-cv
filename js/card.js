@@ -7,55 +7,148 @@ const listSlideImgs = document.querySelectorAll(".portfolio_img");
 let projectSelected = 999;
 portfolioContainer.style.height = 110 + 'vh';
 
+
+
+
+
+// listSlideImgs.forEach((element, index) => {
+//     element.addEventListener('click', () => {
+
+
+//         console.log(projectSelected);
+//         if (portfolioCard.classList.contains('hidden')) {
+//             portfolioCard.classList.toggle('hidden');
+//             projectSelected = 999;
+//         }
+//         if (!portfolioCard.classList.contains('hidden')) {
+
+//             if (projectSelected === index) {
+
+//                 portfolioCard.classList.toggle('hidden');
+//                 //portfolioContainer.style.height = 100 + 'vh';
+
+//             } else {
+
+//                 //portfolioContainer.style.height = 120 + 'vh';
+//                 portfolioCard.innerHTML = `<img src="./imgs/portfolio/${element.classList[element.classList.length - 1]}.png" id="img-portfio-card">
+//                 <div class="portfolio_card__text_container">
+//                     <div>
+//                         <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
+//                         <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
+//                     </div>
+//                     <div>
+//                     <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/eye-transparent.png" alt="eye icon">Deploy</button></a>
+//                     <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/git-transparent.png" alt="github icon">Github</button></a>
+//                     </div>
+//                     <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
+//                     <div>
+//                     <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+//                     <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+//                     </div>
+//                 </div>`
+//             }
+//         }
+
+//         projectSelected = index;
+
+//     })
+// })
+
+
+// listSlideImgs.forEach((element, index) => {
+//     element.addEventListener('click', () => {
+
+//         portfolioCard.classList.add('show2')
+//         console.log(projectSelected);
+
+
+
+
+
+//                 //portfolioContainer.style.height = 120 + 'vh';
+//                 portfolioCard.innerHTML = `<img src="./imgs/portfolio/${element.classList[element.classList.length - 1]}.png" id="img-portfio-card">
+//                 <div class="portfolio_card__text_container">
+//                     <div>
+//                         <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
+//                         <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
+//                     </div>
+//                     <div>
+//                     <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/eye-transparent.png" alt="eye icon">Deploy</button></a>
+//                     <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/git-transparent.png" alt="github icon">Github</button></a>
+//                     </div>
+//                     <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
+//                     <div>
+//                     <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+//                     <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+//                     </div>
+//                 </div>`
+
+
+
+//     })
+// })
+
+
+
+
+
 listSlideImgs.forEach((element, index) => {
     element.addEventListener('click', () => {
 
-
-        console.log(projectSelected);
-        if (portfolioCard.classList.contains('hidden')) {
-            portfolioCard.classList.toggle('hidden');
-            projectSelected = 999;
-        }
-        if (!portfolioCard.classList.contains('hidden')) {
-
+        if (portfolioCard.classList.contains('show_card')) {
+            
             if (projectSelected === index) {
-                portfolioCard.classList.toggle('hidden');
+                portfolioCard.classList.toggle('show_card');
                 //portfolioContainer.style.height = 100 + 'vh';
-
+                return;
             } else {
-                //portfolioContainer.style.height = 120 + 'vh';
                 portfolioCard.innerHTML = `<img src="./imgs/portfolio/${element.classList[element.classList.length - 1]}.png" id="img-portfio-card">
-                <div class="portfolio_card__text_container">
-                    <div>
-                        <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
-                        <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
-                    </div>
-                    <div>
-                    <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/eye-transparent.png" alt="eye icon">Deploy</button></a>
-                    <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/git-transparent.png" alt="github icon">Github</button></a>
-                    </div>
-                    <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
-                    <div>
-                    <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
-                    <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
-                    </div>
-                </div>`
+            <div class="portfolio_card__text_container">
+                <div>
+                    <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
+                    <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
+                </div>
+                <div>
+                <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/eye-transparent.png" alt="eye icon">Deploy</button></a>
+                <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/git-transparent.png" alt="github icon">Github</button></a>
+                </div>
+                <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
+                <div>
+                <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+                <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+                </div>
+            </div>`
             }
         }
 
-        projectSelected = index;
+        if (!portfolioCard.classList.contains('show_card')) {
 
+            portfolioCard.classList.toggle('show_card');
+
+            projectSelected = 999;
+            portfolioCard.innerHTML = `<img src="./imgs/portfolio/${element.classList[element.classList.length - 1]}.png" id="img-portfio-card">
+            <div class="portfolio_card__text_container">
+                <div>
+                    <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
+                    <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
+                </div>
+                <div>
+                <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/eye-transparent.png" alt="eye icon">Deploy</button></a>
+                <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button"><img class="card_img" src="./imgs/git-transparent.png" alt="github icon">Github</button></a>
+                </div>
+                <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
+                <div>
+                <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+                <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
+                </div>
+            </div>`
+        }
+
+
+        projectSelected = index;
+        console.log("----------------------");
     })
 })
-
-
-
-
-
-
-
-
-
 
 
 

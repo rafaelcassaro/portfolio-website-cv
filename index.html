@@ -13,23 +13,35 @@
     <script src="./js/carousel.js" defer></script>
     <script src="./js/card.js" type="module" defer></script>
     <script src="./js/navBar.js" defer></script>
+    <script src="./js/hamburguerMenu.js" type="module" defer></script>
+    <script src="./js/animations.js" defer></script>
 </head>
 
 <body>
     <header class="navigation hidden">
-        <label for="menu" class="container__label">
-            <span class="navigation_hamburguer_menu  navigation__img"></span>
-        </label>
-        <ul class="navigation__anchors">
-          <li>  <a href="#" class="navigation__anchors-link" id="nav-presentation">Inicio</a></li>
+
+        <ul class="navigation__anchors desktop_screen">
+            <li><a href="#" class="navigation__anchors-link" id="nav-presentation">Inicio</a></li>
             <li><a href="#" class="navigation__anchors-link" id="nav-about">Sobre</a></li>
             <li><a href="#" class="navigation__anchors-link" id="nav-technologies">Conhecimento</a></li>
-            <li><a href="#" class="navigation__anchors-link" id="nav-portfolio">Portifólio</a></li>
-            
+            <li><a href="#" class="navigation__anchors-link" id="nav-portfolio">Projetos</a></li>
         </ul>
+
+        <div class="navigation__hamburguer_menu">
+            <img src="./imgs/Menu.svg" class="hamburguer_icon">
+            <ul class="navigation__anchors hamb-open" id="lista">
+                <li><a href="#" class="navigation__anchors-link" id="nav-presentation">Inicio</a></li>
+                <li><a href="#" class="navigation__anchors-link" id="nav-about">Sobre</a></li>
+                <li><a href="#" class="navigation__anchors-link" id="nav-technologies">Conhecimento</a></li>
+                <li><a href="#" class="navigation__anchors-link" id="nav-portfolio">Portifólio</a></li>
+            </ul>
+            
+        </div>
+
     </header>
 
-    <section class="presentation">
+    <section class="presentation opacity-hid">
+        <img src="./imgs/presentation-pic.png" alt="notebook" id="img-perfil">
         <div class="presentation__text">
             <p class="presentation__text_title tx">Ola, me chamo</p>
             <h1 class="presentation__text_title_name tx">Rafael Cassaro</h1>
@@ -37,7 +49,8 @@
             <div class="presentation__links">
                 <a class="presentation__socials" href="https://www.linkedin.com/in/rafaelcassarocosta" target="_blank">
 
-                    <img class="presentation__socials_img linkedin-icon" src="./imgs/linkedin-white.png" alt="linkedin icon">
+                    <img class="presentation__socials_img linkedin-icon" src="./imgs/linkedin-white.png"
+                        alt="linkedin icon">
                 </a>
                 <a class="presentation__socials" href="https://github.com/rafaelcassaro" target="_blank">
                     <img class="presentation__socials_img github-icon" src="./imgs/git-white.png" alt="github icon">
@@ -47,19 +60,19 @@
             </div>
         </div>
 
-         <img src="./imgs/Design sem nome (2).png" id="img-perfil"> 
     </section>
 
-    <section class="about_me">
+    <section class="about_me opacity-hid">
         <h2 class="about_me__title section-title">SOBRE</h2>
         <div class="about_me__content">
-             <img src="./imgs/Design sem nome (2).png" id="about-me-img" alt="rafael cassaro picture"> 
-             <div class="about_me__paragraphs">
+            <img src="./imgs/Design sem nome (2).png" id="about-me-img" alt="rafael cassaro picture">
+            <div class="about_me__paragraphs">
                 <h2 class="about_me__h2">Engenheiro de software</h2>
                 <h3 class="about_me__h3">Desenvolvedor fullstack</h3>
-                 <p class="about_me__paragraph">Após aprender Python na faculdade de matemática, decidi
+                <p class="about_me__paragraph">Após aprender Python na faculdade de matemática, decidi
                     que era isso eu
-                    queria para a vida. Através da faculdade de engenharia de software consegui me identificar como desenvolvedor
+                    queria para a vida. Através da faculdade de engenharia de software consegui me identificar como
+                    desenvolvedor
                     FULL-STACK.
                 </p>
                 <p class="about_me__paragraph">
@@ -70,16 +83,16 @@
                 <p class="about_me__paragraph">
                     Busco um estágio que me permita mergulhar em desafios do mundo real, aplicando os conceitos teóricos
                     que aprendi na faculdade e desenvolver habilidades práticas essenciais para minha futura carreira.
-                </p> 
+                </p>
 
-            </div> 
+            </div>
         </div>
 
     </section>
 
 
 
-    <section class="technologies">
+    <section class="technologies opacity-hid">
         <h2 class="technologies__title"> CONHECIMENTO</h2>
         <div class="technologies__content">
 
@@ -127,8 +140,8 @@
 
     <!-- <hr class="line_horizontal"> -->
 
-    <section class="portfolio">
-        <h2 class="portfolio__title section-title"> PORTIFÓLIO</h2>
+    <section class="portfolio opacity-hid">
+        <h2 class="portfolio__title section-title"> PROJETOS</h2>
         <div class="carousel__container">
             <!-- Slider main container -->
 
@@ -140,12 +153,14 @@
                     <div class="swiper-slide"><img class="portfolio_img alurabooks"
                             src="./imgs/portfolio/alurabooks.png" alt="project picture"></div>
 
-                    <div class="swiper-slide"><img class="portfolio_img fokus" src="./imgs/portfolio/fokus.png" alt="project picture"></div>
+                    <div class="swiper-slide"><img class="portfolio_img fokus" src="./imgs/portfolio/fokus.png"
+                            alt="project picture"></div>
 
                     <div class="swiper-slide"><img class="portfolio_img Alurabooks-Consumo-Api"
                             src="./imgs/portfolio/Alurabooks-Consumo-Api.png" alt="project picture"></div>
 
-                    <div class="swiper-slide"><img class="portfolio_img aluraplus" src="./imgs/portfolio/aluraplus.png" alt="project picture">
+                    <div class="swiper-slide"><img class="portfolio_img aluraplus" src="./imgs/portfolio/aluraplus.png"
+                            alt="project picture">
                     </div>
 
 
@@ -153,28 +168,12 @@
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <div id="bt-next" class="bt-next swiper-button-prev"></div>
+                <div id="bt-prev" class="bt-prev swiper-button-next"></div>
             </div>
 
-            <div class="portfolio_card hidden">
-                <!-- `<img src="./imgs/portfolio/${element.classList[element.classList.length - 1]}.png" id="img-portfio-card">
-                <div class="portfolio_card__text_container">
-                    <div>
-                        <h3 class="portfolio_card__title">${dataPortfolio.cardTitles[index]}</h3>
-                        <p class="portfolio_card__text">${dataPortfolio.cardText}</p>
-                    </div>
-                    <div>
-                    <a href="${dataPortfolio.cardDeploy[index]}" target="_blank"><button class="portfolio_card__button">Deploy</button></a>
-                    <a href="${dataPortfolio.cardGithub[index]}" target="_blank"><button class="portfolio_card__button">Github</button></a>
-                    </div>
-                    <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
-                    <div>
-                    <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
-                    <img class="technologies__img" src="./imgs/techs/x-logo.png" alt="Logo da Linguagem C">
-                    </div>
-                </div>` -->
+            <div class="portfolio_card hidden-card">
+
             </div>
 
         </div>

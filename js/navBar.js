@@ -1,19 +1,38 @@
 const sections = document.querySelectorAll("section");
 const navOptions = document.querySelectorAll(".navigation__anchors-link")
+let count = 0;
+
 
 navOptions.forEach((option, index) => {
-    option.addEventListener('click', (evento) => {
-        evento.preventDefault();
+    if (index > 3) {
+        count++;
+        option.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            console.log(sections[index - count].offsetTop);
+            const targetOffsetTop = sections[index - count].offsetTop;
+            console.log(targetOffsetTop);
 
-        const targetOffsetTop = sections[index].offsetTop;
-        console.log(targetOffsetTop);
+            window.scroll({
+                top: targetOffsetTop,
+                left: 100,
+                behavior: "smooth",
+            });
+        })
+    } else {
+        option.addEventListener('click', (evento) => {
+            evento.preventDefault();
+            console.log(sections[index].offsetTop);
+            const targetOffsetTop = sections[index].offsetTop;
+            console.log(targetOffsetTop);
 
-        window.scroll({
-            top: targetOffsetTop,
-            left: 100,
-            behavior: "smooth",
-        });
-    })
+            window.scroll({
+                top: targetOffsetTop,
+                left: 100,
+                behavior: "smooth",
+            });
+        })
+    }
+
 })
 
 
@@ -26,8 +45,13 @@ const navAbout = document.getElementById("nav-about");
 const navTech = document.getElementById("nav-technologies");
 const navPort = document.getElementById("nav-portfolio");
 
-//----sections
-const aboutSection =document.querySelector(".about_me")
+// const navAbout = document.querySelector("nav-about");
+// const navTech = document.querySelector("nav-technologies");
+// const navPort = document.querySelector("nav-portfolio");
+
+
+//----sections-height-length-----------------------
+const aboutSection = document.querySelector(".about_me")
 const technologiesSection = document.querySelector(".technologies")
 const portfolioSection = document.querySelector(".portfolio")
 
@@ -41,67 +65,44 @@ const portfolioTop = portfolioSection.getBoundingClientRect().top;
 const portfolioBottom = portfolioSection.getBoundingClientRect().bottom;
 
 
-
-window.addEventListener('scroll', ()=> {
+window.addEventListener('scroll', () => {
     const stickyElement = this.document.querySelector(".navigation");
-    console.log(window.scrollY);
-    
+    //console.log(window.scrollY);
+
     if (window.scrollY > posY) {
         stickyElement.style.display = 'grid';
     } else if (window.scrollY < posY) {
         stickyElement.style.display = 'none';
     }
     //-------------
-    if(window.scrollY >= aboutTop - 100 && window.scrollY < aboutBottom){
+    if (  window.scrollY >= aboutTop - 220 && window.scrollY < aboutBottom) {
         navAbout.style.color = "var(--color-primary)";
-    }else{
+    } else {
         navAbout.style.color = "var(--color-secundary)";
     }
 
-    if(window.scrollY >= techSecTop - 100 && window.scrollY < techSecBottom - 20){
+    if (window.scrollY >= techSecTop - 100 && window.scrollY < techSecBottom - 55) {
         navTech.style.color = "var(--color-primary)";
-    }else{
+    } else {
         navTech.style.color = "var(--color-secundary)";
     }
 
-    if(window.scrollY >= portfolioTop - 70 && window.scrollY < portfolioBottom){
+    if (window.scrollY >= portfolioTop - 90 && window.scrollY < portfolioBottom) {
         navPort.style.color = "var(--color-primary)";
-    }else{
+    } else {
         navPort.style.color = "var(--color-secundary)";
     }
+    
+})
+
+navOptions.forEach((element)=>{
+    element.addEventListener("mouseover", ()=>{
+        element.style.color = "var(--color-primary)";
+    })
+
+    element.addEventListener("mouseout", ()=>{
+        element.style.color = "var(--color-secundary)";
+    })
 
 })
 
-
-
-
-function rolar() {
-    window.scrollTo(0, 500)
-}
-
-
-
-
-// rolamento.addEventListener('click', rolar);
-
-
-
-// const elemento = this.document.querySelector(".about__img")
-// const posY = elemento.getBoundingClientRect().top;
-// console.log(posY);
-// window.addEventListener('scroll', function () {
-//     const stickyElement = this.document.querySelector(".header");
-
-//     //const threshold = 400;
-//     //console.log(window.scrollY);
-
-//     if (window.scrollY > posY - 61) {
-//         stickyElement.style.display = 'none';
-//         //stickyElement.style.top = (window.scrollY - threshold) + 'px';
-//     } else if (window.scrollY < posY - 140) {
-//         stickyElement.style.display = 'grid';
-//     } else {
-//         //stickyElement.style.display =  'none';
-//     }
-
-// })
