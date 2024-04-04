@@ -12,16 +12,16 @@ function toggleMenu() {
     menu.classList.toggle("hamb-open");
     hamburguerIcon.classList.toggle("hamburguer_icon2")
     hamburguerIcon.src = './imgs/MenuAberto.svg';
-    
+
 }
 
 
 function toggleMenuBody() {
     console.log(!menu.classList.contains("hamb-open"));
-    if(!menu.classList.contains("hamb-open")){
+    if (!menu.classList.contains("hamb-open")) {
         return;
     }
-    else{
+    else {
         menu.classList.add("hamb-open");
     }
 }

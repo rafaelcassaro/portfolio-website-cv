@@ -2,9 +2,11 @@ const sections = document.querySelectorAll("section");
 const navOptions = document.querySelectorAll(".navigation__anchors-link")
 let count = 0;
 
-
 navOptions.forEach((option, index) => {
-    if (index > 3) {
+    //Como o HTML possui duas listas de navs após metade do array navOptions
+    // é necesserio fazer um contador diminutivo para selecionar a section correta
+    //pois a varivael sections possui metade do tamanho de navOptions 
+    if (index > 4) {
         count++;
         option.addEventListener('click', (evento) => {
             evento.preventDefault();
@@ -44,6 +46,7 @@ const posY = navShow.getBoundingClientRect().top;
 const navAbout = document.getElementById("nav-about");
 const navTech = document.getElementById("nav-technologies");
 const navPort = document.getElementById("nav-portfolio");
+const navContact = document.getElementById("nav-contact");
 
 // const navAbout = document.querySelector("nav-about");
 // const navTech = document.querySelector("nav-technologies");
@@ -54,6 +57,7 @@ const navPort = document.getElementById("nav-portfolio");
 const aboutSection = document.querySelector(".about_me")
 const technologiesSection = document.querySelector(".technologies")
 const portfolioSection = document.querySelector(".portfolio")
+const contactSection = document.querySelector(".footer_contact")
 
 const aboutTop = aboutSection.getBoundingClientRect().top;
 const aboutBottom = aboutSection.getBoundingClientRect().bottom;
@@ -63,6 +67,9 @@ const techSecBottom = technologiesSection.getBoundingClientRect().bottom;
 
 const portfolioTop = portfolioSection.getBoundingClientRect().top;
 const portfolioBottom = portfolioSection.getBoundingClientRect().bottom;
+
+const contactTop = contactSection.getBoundingClientRect().top;
+const contactBottom = contactSection.getBoundingClientRect().bottom;
 
 
 window.addEventListener('scroll', () => {
@@ -75,34 +82,47 @@ window.addEventListener('scroll', () => {
         stickyElement.style.display = 'none';
     }
     //-------------
-    if (  window.scrollY >= aboutTop - 220 && window.scrollY < aboutBottom) {
+    if (window.scrollY >= aboutTop - 220 && window.scrollY < aboutBottom) {
         navAbout.style.color = "var(--color-primary)";
     } else {
         navAbout.style.color = "var(--color-secundary)";
     }
 
-    if (window.scrollY >= techSecTop - 100 && window.scrollY < techSecBottom - 55) {
+    if (window.scrollY >= techSecTop - 100 && window.scrollY < techSecBottom - 100) {
         navTech.style.color = "var(--color-primary)";
     } else {
         navTech.style.color = "var(--color-secundary)";
     }
 
-    if (window.scrollY >= portfolioTop - 90 && window.scrollY < portfolioBottom) {
+    if (window.scrollY >= portfolioTop - 140 && window.scrollY < portfolioBottom) {
         navPort.style.color = "var(--color-primary)";
     } else {
         navPort.style.color = "var(--color-secundary)";
     }
-    
+
+    if (window.scrollY >= contactTop - 1000 && window.scrollY < contactBottom) {
+        navContact.style.color = "var(--color-primary)";
+    } else {
+        navContact.style.color = "var(--color-secundary)";
+    }
+
+    if(navContact.style.color === "var(--color-primary)"){
+        navPort.style.color = "var(--color-secundary)";
+    }
+
 })
 
-navOptions.forEach((element)=>{
-    element.addEventListener("mouseover", ()=>{
+navOptions.forEach((element) => {
+    element.addEventListener("mouseover", () => {
         element.style.color = "var(--color-primary)";
     })
 
-    element.addEventListener("mouseout", ()=>{
+    element.addEventListener("mouseout", () => {
         element.style.color = "var(--color-secundary)";
     })
 
 })
+
+
+
 

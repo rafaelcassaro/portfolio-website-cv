@@ -11,7 +11,7 @@
 
 .about_me__h3 {
   color: var(--strong-green);
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   font-size: 1.3rem;
 }
@@ -40,18 +40,16 @@
   font-size: 1.2rem;
 }
 
-
-@media screen and (max-width:  1490px)  {
+@media screen and (max-width: 1490px) {
   .about_me {
     margin-bottom: 8rem;
   }
-  
+
   #about-me-img {
     width: 40%;
     align-self: center;
     margin-bottom: 1.5rem;
   }
-
 
   .about_me__paragraph {
     margin: 0.5rem 0;
@@ -64,11 +62,11 @@
   }
 }
 
-@media screen and (max-width:  770px)  {
+@media screen and (max-width: 770px) {
   .about_me {
     margin-bottom: 1rem;
   }
-  
+
   .about_me__content {
     margin: auto;
   }
@@ -87,9 +85,7 @@
   }
 }
 
-@media screen and (max-width:  520px)  {
-  
-  
+@media screen and (max-width: 520px) {
   .about_me__paragraphs {
     padding: 0 0.7rem;
   }

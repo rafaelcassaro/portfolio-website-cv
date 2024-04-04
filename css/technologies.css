@@ -14,7 +14,6 @@
 .technologies__content {
   display: grid;
   grid-template-columns: 50% 50%;
-
 }
 
 .technologies__list {
@@ -48,7 +47,6 @@
 }
 
 @media screen and (max-width: 680px) {
-
   .technologies__content {
     display: flex;
     margin: 0;
@@ -56,7 +54,7 @@
   }
 
   .technologies__list__name {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .technologies__list {
@@ -66,12 +64,21 @@
   .technologies__img {
     height: auto;
     width: 2rem;
+    transform: scale(1.3);
+  }
+
+  .card-tech-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .card-tech-img{
+    transform: scale(1.7);
   }
 
   .technologies__title {
-
     font-size: 1.5rem;
-
   }
-  
 }

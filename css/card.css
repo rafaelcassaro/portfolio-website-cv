@@ -2,9 +2,10 @@
 
 .portfolio_card {
   display: flex;
-  align-items: start;
+  /* align-items: start; */
   text-align: start;
   width: 55rem;
+  /* width: fit-content; */
   margin: 1em auto;
   gap: 2rem;
   padding: 2em 3em;
@@ -25,6 +26,7 @@
 
 .portfolio_card__text {
   padding: 1rem 0;
+  width: fit-content;
 }
 
 .portfolio_card__button {
@@ -66,25 +68,36 @@
 }
 
 @media screen and (max-width: 1070px) {
-  .portfolio_card {
+  /* .portfolio_card {
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: auto;
+  } */
+  .portfolio_card {
+    width: fit-content;
   }
-
-  .portfolio_card__button {
+  
+  /* .portfolio_card__button {
     margin-right: auto;
     margin-left: auto;
-  }
+  } */
 
   #img-portfio-card {
-    display: none;
+    width: 15rem;
+    height: 15rem;
+    align-self: center;
   }
 
-  .portfolio_card__text {
+  /* .portfolio_card__text {
     text-align: left;
     margin: 0 15%;
+  } */
+}
+
+@media screen and (max-width: 690px) {
+  #img-portfio-card {
+    display: none;
   }
 }
 

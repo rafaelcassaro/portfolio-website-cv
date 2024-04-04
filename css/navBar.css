@@ -30,8 +30,6 @@
   display: none;
 }
 
-
-
 @media screen and (max-width: 620px) {
   .navigation {
     display: flex;
@@ -47,14 +45,13 @@
     background-color: var(--white);
   } */
 
-
   .navigation__hamburguer_menu {
     display: block;
     width: 100%;
     background-color: var(--white);
   }
 
-  .hamburguer_icon2{
+  .hamburguer_icon2 {
     background-color: yellow;
     background-image: url("../imgs/MenuAberto.svg");
     background-repeat: no-repeat;

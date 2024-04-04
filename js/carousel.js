@@ -14,8 +14,8 @@
 const swiperBtNext = document.querySelector(".bt-next");
 const swiperBtPrev = document.querySelector(".bt-prev");
 
-function windowSize(){
-    if(window.innerWidth < 650){
+function windowSize() {
+    if (window.innerWidth < 650) {
         const swiper = new Swiper('.swiper', {
             loop: true,
             spaceBetween: 10,
@@ -30,7 +30,7 @@ function windowSize(){
         swiperBtPrev.classList.remove("swiper-button-next")
         swiperBtNext.classList.remove("swiper-button-next")
         swiperBtNext.classList.remove("swiper-button-prev")
-    }else{
+    } else {
         const swiper = new Swiper('.swiper', {
             loop: true,
             spaceBetween: 10,
@@ -41,10 +41,10 @@ function windowSize(){
             }, navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
-              },
+            },
         });
     }
-    
+
 }
 
 windowSize();

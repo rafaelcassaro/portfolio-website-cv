@@ -3,7 +3,7 @@
   flex-direction: column;
   text-align: center;
   background-color: #f0f0f0;
-  height: 100vh;
+  height: 120vh;
   z-index: 1;
 }
 
@@ -68,9 +68,11 @@
   width: 15em;
 }
 
-
-
 @media screen and (max-width: 1510px) {
+  .portfolio {
+    height: 145vh;
+  }
+
   .swiper {
     width: auto;
   }
@@ -83,31 +85,10 @@
   .carousel__container {
     margin: 0 1rem;
   }
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-    color: transparent;
-  }
 }
 
-@media screen and(max-width: 650px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-    color: transparent;
-  }
-
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-family: swiper-icons;
-    font-size: 0;
-    text-transform: none ;
-    letter-spacing: 0;
-    font-variant: initial;
-    line-height: 0;
-    color: transparent;
-}
-
-  .portfolio__title {
-    font-size: 0.5rem;
+@media screen and (max-width: 650px) {
+  .portfolio {
+    height: 110vh;
   }
 }
