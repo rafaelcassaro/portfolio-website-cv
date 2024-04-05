@@ -106,7 +106,7 @@ window.addEventListener('scroll', () => {
         navContact.style.color = "var(--color-secundary)";
     }
 
-    if(navContact.style.color === "var(--color-primary)"){
+    if (navContact.style.color === "var(--color-primary)") {
         navPort.style.color = "var(--color-secundary)";
     }
 

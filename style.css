@@ -9,7 +9,6 @@
 @import url(./css/navBar.css);
 @import url(./css/footer.css);
 
-/*  fce6a9*/
 :root {
   --color-primary: #0bceaf;
   --color-secundary: #0e0e0e;
@@ -42,7 +41,7 @@ a {
 button:hover {
   color: black;
   background-color: white;
-  transition: all .6s;
+  transition: all 0.6s;
 }
 
 p {
@@ -69,8 +68,6 @@ p {
   transform: translateY(-100%);
   transition: all 1.3s;
 }
-
-
 
 .opacity-hid {
   opacity: 0;
@@ -107,7 +104,7 @@ p {
   transition: all 1s;
 }
 
-.text-bold{
+.text-bold {
   font-weight: 600;
 }
 
@@ -120,5 +117,4 @@ p {
   .portfolio__title {
     font-size: 2rem;
   }
-
 }

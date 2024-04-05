@@ -56,15 +56,15 @@
 
 .portfolio_img {
   width: 100%;
-  height: auto; /* Mantém a proporção da imagem */
+  height: auto;
   cursor: pointer;
 }
 
 .botao-hiden {
-  padding: 0; /* Remove o preenchimento interno do botão */
-  border: none; /* Remove a borda do botão */
-  background: none; /* Remove o plano de fundo do botão */
-  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão */
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
   width: 15em;
 }
 
