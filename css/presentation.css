@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-tertiary);
+  /* background: linear-gradient(var(--color-tertiary) ,#007965); */
   height: 100vh;
 }
 

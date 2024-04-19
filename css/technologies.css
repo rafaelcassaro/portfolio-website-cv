@@ -39,6 +39,11 @@
   width: 3rem;
 }
 
+.technologies__img:hover{
+  transform: scale(1.5);
+  transition: all 0.7s;
+}
+
 .technologies__list__name {
   color: var(--color-secundary);
   text-decoration: none;

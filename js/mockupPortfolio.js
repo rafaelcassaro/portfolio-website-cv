@@ -1,5 +1,18 @@
 
 const projects = [{
+    cardTitle: 'SeachCountry',
+    cardDeploy: 'https://countries-api-react-rafael-cassaro-costas-projects.vercel.app/',
+    cardGithub: 'https://github.com/rafaelcassaro/countries-api-react',
+    cardText: '<span class="text-bold">Projeto:</span> Consumo de uma api com React. <br> Consumi uma API publica de informação de países, e atráves de React hooks mostrei na telas e salvei em cards as informações ',
+    cardTechImgs: '<img class="technologies__img card-tech-img" src="./imgs/techs/html-logo.png" alt="HTML Icon">'
+        + '<img class="technologies__img card card-tech-img" src="./imgs/techs/css3-logo.png" alt="CSS Icon">'
+        + '<img class="technologies__img card-tech-img" src="./imgs/techs/js-logo2.png" alt="Js Icon">'
+        + '<img class="technologies__img card-tech-img" src="./imgs/techs/react-logo.png" alt="React Icon">'
+
+
+},
+
+{
     cardTitle: 'Alurabooks',
     cardDeploy: 'https://rafaelcassaro.github.io/Alurabook-web/',
     cardGithub: 'https://github.com/rafaelcassaro/Alurabook-web',
@@ -30,10 +43,10 @@ const projects = [{
 
 },
 {
-    cardTitle: 'Alura+',
-    cardDeploy: 'https://alura-plus-web-rafael-cassaro-costas-projects.vercel.app/',
-    cardGithub: 'https://github.com/rafaelcassaro/AluraPlus-web/tree/main',
-    cardText: '<span class="text-bold">Projeto:</span> Compra de plano. <br> Estudo sobre tags HTML e CSS em geral',
+    cardTitle: 'OptimusTech',
+    cardDeploy: 'https://optimus-tech-rafael-cassaro-costas-projects.vercel.app/',
+    cardGithub: 'https://github.com/rafaelcassaro/OptimusTech',
+    cardText: '<span class="text-bold">Projeto:</span> Site fictício para cliente. <br> Cliente fictício fornecido pelo desafio Alura 7DayOfCode. Site feito seguindo template do Figma',
     cardTechImgs: '<img class="technologies__img card-tech-img" src="./imgs/techs/html-logo.png" alt="HTML Icon">'
         + '<img class="technologies__img card-tech-img" src="./imgs/techs/css3-logo.png" alt="CSS Icon">'
 
