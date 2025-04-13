@@ -24,7 +24,8 @@
 }
 
 #about-me-img {
-  width: 50%;
+
+  max-width: 150rem;
   height: auto;
 }
 

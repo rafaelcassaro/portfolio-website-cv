@@ -10,23 +10,18 @@ navOptions.forEach((option, index) => {
         count++;
         option.addEventListener('click', (evento) => {
             evento.preventDefault();
-            console.log(sections[index - count].offsetTop);
             const targetOffsetTop = sections[index - count].offsetTop;
-            console.log(targetOffsetTop);
-
             window.scroll({
                 top: targetOffsetTop,
                 left: 100,
                 behavior: "smooth",
             });
         })
-    } else {
+    } 
+    else {
         option.addEventListener('click', (evento) => {
             evento.preventDefault();
-            console.log(sections[index].offsetTop);
             const targetOffsetTop = sections[index].offsetTop;
-            console.log(targetOffsetTop);
-
             window.scroll({
                 top: targetOffsetTop,
                 left: 100,
