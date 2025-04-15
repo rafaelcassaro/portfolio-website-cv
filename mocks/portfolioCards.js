@@ -28,6 +28,18 @@ const cards = [
     `
   },
   {
+    cardTitle: "Meteora",
+    cardDeploy: "https://react-globals-state.vercel.app/",
+    cardGithub: "https://github.com/rafaelcassaro/react-globals-state",
+    cardText: "<span class='text-bold'>Projeto:</span> E-commerce em fase de desenvolvimento inicial. <br> Gerenciei estados globais do react utilizando, context APi para evitar 'prop drilling', useReducer para controle de estado e useMemo para otimização e desempenho.",
+    cardTechImgs: `
+      <img class='technologies__img card-tech-img' src='./imgs/techs/html-logo.png' alt='HTML Icon'>
+      <img class='technologies__img card-tech-img' src='./imgs/techs/css3-logo.png' alt='CSS Icon'>
+      <img class='technologies__img card-tech-img' src='./imgs/techs/js-logo2.png' alt='JS Icon'>
+      <img class='technologies__img card-tech-img' src='./imgs/techs/react-logo.png' alt='React Icon'>
+    `
+  },
+  {
     cardTitle: "SeachCountry",
     cardDeploy: "https://countries-api-react-rafael-cassaro-costas-projects.vercel.app/",
     cardGithub: "https://github.com/rafaelcassaro/countries-api-react",

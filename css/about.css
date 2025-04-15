@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 8rem;
+
 }
 
 .about_me__h2 {
@@ -18,6 +19,7 @@
 
 .about_me__content {
   display: flex;
+  max-width: 79.188rem;
   justify-content: center;
   align-items: center;
   margin: 0 17%;
