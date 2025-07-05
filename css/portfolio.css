@@ -13,6 +13,22 @@
   font-size: 4rem;
 }
 
+.portfolio__filter {
+  margin-bottom: 1.5rem;
+}
+
+.portfolio__img {
+  height: auto;
+  width: 3rem;
+  margin-right: 0.25rem;
+  margin-top: .25rem;
+}
+
+.portfolio_technologies__img {
+  height: auto;
+  width: 3rem;
+}
+
 .swiper {
   width: 50%;
 }
@@ -21,11 +37,7 @@
 .swiper-button-next {
   display: block;
   top: 60%;
-
 }
-
-
-
 
 .swiper-slide img {
   width: 100%;
@@ -95,5 +107,11 @@
 @media screen and (max-width: 650px) {
   .portfolio {
     height: 110vh;
+  }
+  .portfolio_technologies__img {
+    height: auto;
+    width: 2rem;
+    margin-right: .15rem;
+    transform: scale(1);
   }
 }
