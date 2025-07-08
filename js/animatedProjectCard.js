@@ -1,13 +1,10 @@
-import portfolioData from "../mocks/portfolioCards.js";
-
-const portfolioCard = document.querySelector(".portfolio_card");
-const listSlideImgs = document.querySelectorAll(".portfolio_img");
 let projectSelected = 999;
 
-function gerarCardHTML(index, imgClass) {
-  const { cardTitle, cardText, cardDeploy, cardGithub, cardTechImgs } = portfolioData[index];
+//------- create project card ------
+function gerarCardHTML(index,list) {
+  const { cardTitle, cardText, cardDeploy, cardGithub, imgPath, cardTechImgs } = list[index];
   return `
-    <img src="./imgs/portfolio/${imgClass}.png" id="img-portfio-card">
+    <img src="${imgPath}" id="img-portfio-card">
     <div class="portfolio_card__text_container">
         <div>
             <h3 class="portfolio_card__title">${cardTitle}</h3>
@@ -33,21 +30,26 @@ function gerarCardHTML(index, imgClass) {
   `;
 }
 
-listSlideImgs.forEach((element, index) => {
-  element.addEventListener("click", () => {
-    const imgClass = element.classList[element.classList.length - 1];
+export default function handleProjectsAnimatedCard(list) {
+  const portfolioCard = document.querySelector(".portfolio_card");
+  const listSlideImgs = document.querySelectorAll(".portfolio_img");
 
-    if (portfolioCard.classList.contains("show_card") && projectSelected === index) {
-      portfolioCard.classList.toggle("show_card");
-      return;
-    }
 
-    portfolioCard.innerHTML = gerarCardHTML(index, imgClass);
+  listSlideImgs.forEach((element, index) => {
+    element.addEventListener("click", () => {
 
-    if (!portfolioCard.classList.contains("show_card")) {
-      portfolioCard.classList.add("show_card");
-    }
+      if (portfolioCard.classList.contains("show_card") && projectSelected === index) {
+        portfolioCard.classList.toggle("show_card");
+        return;
+      }
 
-    projectSelected = index;
+      portfolioCard.innerHTML = gerarCardHTML(index,list);
+
+      if (!portfolioCard.classList.contains("show_card")) {
+        portfolioCard.classList.add("show_card");
+      }
+
+      projectSelected = index;
+    });
   });
-});
+}

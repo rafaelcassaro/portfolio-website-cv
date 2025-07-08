@@ -13,15 +13,32 @@
   font-size: 4rem;
 }
 
+.portfolio__filter-title{
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
 .portfolio__filter {
   margin-bottom: 1.5rem;
 }
 
-.portfolio__img {
+.portfolio__filter-img {
   height: auto;
   width: 3rem;
   margin-right: 0.25rem;
   margin-top: .25rem;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.portfolio__filter-img:hover {
+  filter: grayscale(0%);
+}
+
+.select-img{
+  filter: grayscale(0%);
+  
 }
 
 .portfolio_technologies__img {
