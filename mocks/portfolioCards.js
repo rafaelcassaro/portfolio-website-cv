@@ -21,7 +21,7 @@ const cards = [
     cardGithub: "https://github.com/rafaelcassaro/search-github-repos",
     cardText: "<span class='text-bold'>Projeto:</span> Procura de repositórios no GitHub. <br> Busca repositórios de um usuário no GitHub. O projeto foi feito com shallow routing e useParams, pois a API do GitHub possui uma quantidade limitada de requisições.",
     imgPath: "./imgs/portfolio/search-git-repos.png",
-    techs: ["html","css","react"],
+    techs: ["html","css","typeScript","react","nextjs","tailwind"],
     cardTechImgs: `
       <img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/html-logo.png' alt='HTML Icon'>
       <img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/css3-logo.png' alt='CSS Icon'>
@@ -37,7 +37,7 @@ const cards = [
     cardGithub: "https://github.com/rafaelcassaro/react-globals-state",
     cardText: "<span class='text-bold'>Projeto:</span> E-commerce em fase de desenvolvimento inicial. <br> Gerenciei estados globais do react utilizando, context APi para evitar 'prop drilling', useReducer para controle de estado e useMemo para otimização e desempenho.",
     imgPath: "./imgs/portfolio/react-globals-state.png",
-    techs: ["html","css","react"],
+    techs: ["html","css", "javascript","react"],
     cardTechImgs: `
       <img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/html-logo.png' alt='HTML Icon'>
       <img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/css3-logo.png' alt='CSS Icon'>
