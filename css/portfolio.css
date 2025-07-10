@@ -13,7 +13,7 @@
   font-size: 4rem;
 }
 
-.portfolio__filter-title{
+.portfolio__filter-title {
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -28,7 +28,7 @@
   height: auto;
   width: 3rem;
   margin-right: 0.25rem;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   filter: grayscale(100%);
   cursor: pointer;
 }
@@ -37,9 +37,8 @@
   filter: grayscale(0%);
 }
 
-.select-img{
+.select-img {
   filter: grayscale(0%);
-  
 }
 
 .portfolio_technologies__img {
@@ -129,7 +128,10 @@
   .portfolio_technologies__img {
     height: auto;
     width: 2rem;
-    margin-right: .15rem;
+    margin-right: 0.15rem;
     transform: scale(1);
+  }
+  .portfolio__filter-img:hover {
+    filter: none !important;
   }
 }

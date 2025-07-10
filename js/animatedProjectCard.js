@@ -1,14 +1,30 @@
 let projectSelected = 999;
 
 //------- create project card ------
-function gerarCardHTML(index,list) {
-  const { cardTitle, cardText, cardDeploy, cardGithub, imgPath, cardTechImgs } = list[index];
+function createCardHTML(index,list) {
+  const { cardTitle, cardDeploy, cardGithub,cardAbout,cardResume, imgPath, cardTechImgs,cardTechImgsAlt } = list[index];
+  let techsIcon = "";
+  console.log(cardTitle);
+  console.log(cardTechImgs);
+
+  if(cardTechImgs.length > 0){
+    
+    cardTechImgs.forEach( (e,i)=> {
+      techsIcon += `<img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/${e}.png' alt='${cardTechImgsAlt[i]}'>`;
+    } )
+
+  }
+
+
   return `
     <img src="${imgPath}" id="img-portfio-card">
     <div class="portfolio_card__text_container">
         <div>
             <h3 class="portfolio_card__title">${cardTitle}</h3>
-            <p class="portfolio_card__text">${cardText}</p>
+            <p class="portfolio_card__text">
+            
+            <span class='text-bold'>Projeto:</span> ${cardAbout} <br>---<br>${cardResume}
+            </p>
         </div>
         <div>
             <a href="${cardDeploy}" target="_blank">
@@ -24,7 +40,7 @@ function gerarCardHTML(index,list) {
         </div>
         <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
         <div class="card-tech-section">
-            ${cardTechImgs}
+            ${techsIcon}
         </div>
     </div>
   `;
@@ -43,7 +59,7 @@ export default function handleProjectsAnimatedCard(list) {
         return;
       }
 
-      portfolioCard.innerHTML = gerarCardHTML(index,list);
+      portfolioCard.innerHTML = createCardHTML(index,list);
 
       if (!portfolioCard.classList.contains("show_card")) {
         portfolioCard.classList.add("show_card");

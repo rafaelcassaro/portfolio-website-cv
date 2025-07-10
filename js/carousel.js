@@ -36,17 +36,19 @@ function createSwipper() {
         });
     }
 
-    portfolioData.forEach((e, i) => {
-        swiper.addSlide(i, `<div class="swiper-slide"> <img class="portfolio_img " src="${e.imgPath}"  alt="project picture">  </div>`)
-    });
+    addNewSlide(portfolioData);
     handleProjectsAnimatedCard(portfolioData);
 }
 
 export default function tradeSlides(list) {
     swiper.removeAllSlides();
+    addNewSlide(list);
+
+    handleProjectsAnimatedCard(list);
+}
+
+function addNewSlide (list) {
     list.forEach((e, i) => {
         swiper.addSlide(i, `<div class="swiper-slide"> <img class="portfolio_img " src="${e.imgPath}"  alt="project picture">  </div>`)
     });
-
-    handleProjectsAnimatedCard(list);
 }
