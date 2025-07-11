@@ -8,7 +8,8 @@ const cards = [
     imgPath: "./imgs/portfolio/next-app-router-course.png",
     techs: ["html", "css", "typeScript", "react", "nextjs", "tailwind"],
     cardTechImgs: ["html-logo", "css3-logo", "typescript-logo", "react-logo", "nextjs-logo", "tailwind-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Tailwind Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Tailwind Icon"],
+    projectType: "frontend"
   },
   {
     cardTitle: "Github-api-consumer",
@@ -19,8 +20,26 @@ const cards = [
     imgPath: "./imgs/portfolio/search-git-repos.png",
     techs: ["html", "css", "typeScript", "react", "nextjs", "tailwind"],
     cardTechImgs: ["html-logo", "css3-logo", "typescript-logo", "react-logo", "nextjs-logo", "tailwind-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Tailwind Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Tailwind Icon"],
+    projectType: "frontend"
   },
+
+  {
+    cardTitle: "RightPlaceApp-tcc",
+    cardDocument: "https://drive.google.com/file/d/17-KucW73l5C6hHIY3OLRDYFn24Wyp6GW/view",
+    cardDeploy: "https://github.com/rafaelcassaro/tcc-mobile",
+    cardGithub: "https://github.com/rafaelcassaro/tcc-back-end",
+    cardAbout: "Aplicativo para busca de repúblicas.",
+    cardResume: "Protótipo de aplicativo para busca de repúblicas, incluindo autenticação via token e controle de acesso, com foco em usabilidade e comunicação eficiente entre as camadas.",
+    imgPath: "./imgs/portfolio/tcc.png",
+    techs: ["java", "spring","android"],
+    cardTechImgs: ["java-logo", "spring-logo", "android-logo"],
+    cardTechImgsAlt: ["java Icon", "spring Icon", "Android icon"],
+    projectType: "tcc"
+  },
+
+
+
 
   {
     cardTitle: "Frontend-challenge-rocketseat",
@@ -31,7 +50,19 @@ const cards = [
     imgPath: "./imgs/portfolio/frontend-rocketseat.png",
     techs: ["html", "css", "typeScript", "react", "nextjs", "styledcomponent"],
     cardTechImgs: ["html-logo", "css3-logo", "typescript-logo", "react-logo", "nextjs-logo", "styledcomponent-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Styled Components Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "typescript Icon", "React Icon", "Next.js Icon", "Styled Components Icon"],
+    projectType: "frontend"
+  },
+  {
+    cardTitle: "Course-springboot-java11",
+    cardGithub: "https://github.com/rafaelcassaro/course-springboot-java11",
+    cardAbout: "Curso de spring da udemy.",
+    cardResume: "Projeto feito no curso da udemy, em que aprendi e me aprofundei no ecosistema spring.",
+    imgPath: "./imgs/portfolio/backend.png",
+    techs: ["java", "spring"],
+    cardTechImgs: ["java-logo", "spring-logo"],
+    cardTechImgsAlt: ["java Icon", "spring Icon"],
+    projectType: "backend"
   },
   {
     cardTitle: "Meteora",
@@ -42,8 +73,22 @@ const cards = [
     imgPath: "./imgs/portfolio/react-globals-state.png",
     techs: ["html", "css", "javascript", "react"],
     cardTechImgs: ["html-logo", "css3-logo", "js-logo2", "react-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon", "React Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon", "React Icon"],
+    projectType: "frontend"
   },
+
+  {
+    cardTitle: "Padrões-de-projeto-spring",
+    cardGithub: "https://github.com/rafaelcassaro/course-springboot-java11",
+    cardAbout: "Aplicação de impostos.",
+    cardResume: "Backend para treinar aplicação dos padrões de projeto SINGLETON e BRIDGE, do qual aplica imposto de ICMS em um produto, que se da baseado no estado.",
+    imgPath: "./imgs/portfolio/backend.png",
+    techs: ["java", "spring"],
+    cardTechImgs: ["java-logo", "spring-logo"],
+    cardTechImgsAlt: ["java Icon", "spring Icon"],
+    projectType: "backend"
+  },
+
   {
     cardTitle: "SeachCountry",
     cardDeploy: "https://countries-api-react-rafael-cassaro-costas-projects.vercel.app/",
@@ -53,7 +98,8 @@ const cards = [
     imgPath: "./imgs/portfolio/countryApi.png",
     techs: ["html", "css", "javascript", "react"],
     cardTechImgs: ["html-logo", "css3-logo", "js-logo2", "react-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon", "React Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon", "React Icon"],
+    projectType: "frontend"
   },
   {
     cardTitle: "Alurabooks",
@@ -64,7 +110,8 @@ const cards = [
     imgPath: "./imgs/portfolio/alurabooks.png",
     techs: ["html", "css"],
     cardTechImgs: ["html-logo", "css3-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon"],
+    projectType: "frontend"
   },
   {
     cardTitle: "Fokus",
@@ -75,7 +122,8 @@ const cards = [
     imgPath: "./imgs/portfolio/fokus.png",
     techs: ["html", "css", "javascript"],
     cardTechImgs: ["html-logo", "css3-logo", "js-logo2"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon"],
+    projectType: "frontend"
   },
   {
     cardTitle: "Alurabooks-Consumo-Api",
@@ -86,7 +134,8 @@ const cards = [
     imgPath: "./imgs/portfolio/Alurabooks-Consumo-Api.png",
     techs: ["html", "css", "javascript"],
     cardTechImgs: ["html-logo", "css3-logo", "js-logo2"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon", "javascript Icon"],
+    projectType: "frontend"
   },
   {
     cardTitle: "OptimusTech",
@@ -97,7 +146,8 @@ const cards = [
     imgPath: "./imgs/portfolio/optimustech.png",
     techs: ["html", "css"],
     cardTechImgs: ["html-logo", "css3-logo"],
-    cardTechImgsAlt: ["HTML Icon", "CSS Icon"]
+    cardTechImgsAlt: ["HTML Icon", "CSS Icon"],
+    projectType: "frontend"
   }
 ];
 
