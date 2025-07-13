@@ -9,18 +9,13 @@ const techsList = [];
 //add click event to techs icons
 for (const e of portfolioFilterImgs) {
     e.addEventListener("click", () => {
-
-
         e.classList.toggle("select-img");
 
         //add or remove tech from filter
         if (e.classList[1] === "select-img") {
             techsList.push(e.alt);
-            console.log("techsList2: " + techsList);
-
         } else {
             techsList.splice(techsList.indexOf(e.alt), 1);
-
         }
         filter();
     });

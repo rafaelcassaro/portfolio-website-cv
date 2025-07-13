@@ -10,8 +10,7 @@ function createCardHTML(index, list) {
       techsIcon += `<img class='portfolio_technologies__img card-tech-img' src='./imgs/techs/${e}.png' alt='${cardTechImgsAlt[i]}'>`;
     })
   }
-  console.log(projectType)
-  console.log(projectType === "tcc")
+  //different shape per type of project
   if (projectType === "tcc") {
     return `
     <img src="${imgPath}" id="img-portfio-card">
@@ -108,6 +107,10 @@ function createCardHTML(index, list) {
 export default function handleProjectsAnimatedCard(list) {
   const portfolioCard = document.querySelector(".portfolio_card");
   const listSlideImgs = document.querySelectorAll(".portfolio_img");
+
+    if(list.length === 0) {
+        return;
+    }
 
 
   listSlideImgs.forEach((element, index) => {

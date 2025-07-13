@@ -3,7 +3,7 @@ import handleProjectsAnimatedCard from "./animatedProjectCard.js";
 
 const swiperBtNext = document.querySelector(".bt-next");
 const swiperBtPrev = document.querySelector(".bt-prev");
-
+const portfolioCard = document.querySelector(".portfolio_card");
 let swiper;
 
 createSwipper();
@@ -40,14 +40,27 @@ function createSwipper() {
     handleProjectsAnimatedCard(portfolioData);
 }
 
+//filter projects
 export default function tradeSlides(list) {
+
+    //close detailed project card if opened
+    if (portfolioCard.classList.contains("show_card")) {
+        portfolioCard.classList.toggle("show_card");
+    }
+
+
     swiper.removeAllSlides();
     addNewSlide(list);
 
     handleProjectsAnimatedCard(list);
 }
+//add new html slide into swiper
+function addNewSlide(list) {
 
-function addNewSlide (list) {
+    if (list.length === 0) {
+        swiper.addSlide(0, `<div class="swiper-slide"> <img class="portfolio_img " src="./imgs/notFound.png"  alt="project picture">  </div>`)
+    }
+
     list.forEach((e, i) => {
         swiper.addSlide(i, `<div class="swiper-slide"> <img class="portfolio_img " src="${e.imgPath}"  alt="project picture">  </div>`)
     });
