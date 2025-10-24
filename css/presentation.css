@@ -69,18 +69,6 @@
   transition: all 0.7s;
 }
 
-.presentation__button {
-  font-size: 1.1rem;
-  /* color: rgb(158, 158, 226); */
-  color: var(--presentation);
-  background: none;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  border: 1px solid;
-  margin-top: 8px;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 910px) {
   .presentation {
     padding: 0.5rem;
