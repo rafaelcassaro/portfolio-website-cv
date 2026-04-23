@@ -1,16 +1,20 @@
+import portfolioData from "../mocks/portfolioCards.js";
+
 // Seleciona os elementos do overlay
 const overlay = document.getElementById('overlay-project-card');
 const overlayImg = document.getElementById('overlay-img');
 const closeBtn = document.getElementById('overlay-close-btn');
+const testeov = document.querySelector(".testeov");
 
 // Seleciona todas as imagens dos projetos principais
 const projectImages = document.querySelectorAll('.main_projects__img');
 
 // Função para abrir o overlay
 function openOverlay(imageSrc) {
-  overlayImg.src = imageSrc;
+ // overlayImg.src = imageSrc;
   overlay.classList.remove('hidden');
   document.body.style.overflow = 'hidden'; // Previne scroll
+  testeov.innerHTML = createOverlayCardHTML(imageSrc, portfolioData);
 }
 
 // Função para fechar o overlay
@@ -22,7 +26,9 @@ function closeOverlay() {
 // Adiciona event listeners para cada imagem
 projectImages.forEach(img => {
   img.addEventListener('click', () => {
-    openOverlay(img.src);
+
+    openOverlay(img.classList[1]);
+
   });
   img.style.cursor = 'pointer'; // Indica que é clicável
 });
@@ -45,7 +51,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-function createCardHTML(index, list) {
+function createOverlayCardHTML(index, list) {
   const { cardTitle, cardDeploy, cardGithub, cardAbout, cardResume, imgPath, cardTechImgs, cardTechImgsAlt, projectType } = list[index];
   let techsIcon = "";
 
@@ -91,33 +97,6 @@ function createCardHTML(index, list) {
   `;
   }
 
-  if (projectType === "backend") {
-    return `
-    <img src="${imgPath}" id="img-portfio-card">
-    <div class="portfolio_card__text_container">
-        <div>
-            <h3 class="portfolio_card__title">${cardTitle}</h3>
-            <p class="portfolio_card__text">
-            
-            <span class='text-bold'>Projeto:</span> ${cardAbout} <br>---<br>${cardResume}
-            </p>
-        </div>
-        <div>
-            <a href="${cardGithub}" target="_blank">
-                <button class="portfolio_card__button">
-                    <img class="card_img" src="./imgs/git-transparent.png" alt="github icon">código
-                </button>
-            </a>
-        </div>
-        <p class="portfolio_card__technologies_title">Técnologias Utilizadas</p>
-        <div class="card-tech-section">
-            ${techsIcon}
-        </div>
-    </div>
-  `;
-  }
-
-
   return `
     <img src="${imgPath}" id="img-portfio-card">
     <div class="portfolio_card__text_container">
@@ -146,33 +125,4 @@ function createCardHTML(index, list) {
         </div>
     </div>
   `;
-}
-
-
-export default function handleMainProjects(list) {
-  const portfolioCard = document.querySelector(".portfolio_card");
-  const listSlideImgs = document.querySelectorAll(".portfolio_img");
-
-    if(list.length === 0) {
-        return;
-    }
-
-
-  listSlideImgs.forEach((element, index) => {
-    element.addEventListener("click", () => {
-
-      if (portfolioCard.classList.contains("show_card") && projectSelected === index) {
-        portfolioCard.classList.toggle("show_card");
-        return;
-      }
-
-      portfolioCard.innerHTML = createCardHTML(index, list);
-
-      if (!portfolioCard.classList.contains("show_card")) {
-        portfolioCard.classList.add("show_card");
-      }
-
-      projectSelected = index;
-    });
-  });
 }
