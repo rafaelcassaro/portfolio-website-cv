@@ -1,4 +1,4 @@
-const cards = [
+export const cards = [
   {
     cardTitle: "Next-AppRouter",
     cardDeploy: "https://learn-next-three-omega.vercel.app/",

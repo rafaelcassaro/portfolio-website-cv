@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  z-index: 1;
+}
+
+.portfolio_color{
   background-color: #f0f0f0;
   height: 120vh;
-  z-index: 1;
 }
 
 .portfolio__title {
@@ -30,6 +33,9 @@
   margin-right: 0.25rem;
   margin-top: 0.25rem;
   filter: grayscale(100%);
+  border: var(--color-secundary) 3px solid;
+  
+  padding: 4px;
   cursor: pointer;
 }
 
@@ -39,6 +45,7 @@
 
 .select-img {
   filter: grayscale(0%);
+  border: var(--color-primary) 3px solid;
 }
 
 .portfolio_technologies__img {
@@ -46,9 +53,7 @@
   width: 3rem;
 }
 
-.swiper {
-  width: 50%;
-}
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -109,6 +114,7 @@
 
   .swiper {
     width: auto;
+   
   }
   .carousel__container {
     margin: 0 1rem;

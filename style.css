@@ -8,6 +8,7 @@
 @import url(./css/card.css);
 @import url(./css/navBar.css);
 @import url(./css/footer.css);
+@import url(./css/mainProjects.css);
 
 :root {
   --color-primary: #0bceaf;
@@ -32,6 +33,12 @@ body {
   font-family: var(--font-secundary);
   box-sizing: border-box;
   color: var(--color-secundary);
+  
+}
+
+.screen_size {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 a {

@@ -1,0 +1,15 @@
+.main_projects__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+.main_projects__img{
+    width: 30%;
+    height: auto;
+    border: 1px solid #000000;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    pointer-events: auto;
+}
