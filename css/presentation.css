@@ -94,9 +94,7 @@
   width: 3rem;
   margin-right: 0.25rem;
   margin-top: 0.25rem;
-  filter: grayscale(100%);
-  border: var(--color-secundary) 3px solid;
-
+  
   padding: 4px;
   cursor: pointer;
 }
@@ -124,6 +122,7 @@
 @media screen and (max-width: 550px) {
 
   .presentation {
+    height: fit-content;
     flex-direction: column;
     padding: 0.5rem;
   }
@@ -145,8 +144,15 @@
     width: 50%;
     height: auto;
     border-radius: 50%;
-    margin: 0;
+    margin: 2rem 0 0 0;
   }
+
+  .presentation__filter-img {
+  height: auto;
+  width: 2.5rem;
+  padding: 0;
+}
+
 
   .presentation__text {
     margin: 0 auto;
