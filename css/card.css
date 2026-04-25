@@ -68,6 +68,7 @@
 @media screen and (max-width: 1070px) {
   .portfolio_card {
     width: fit-content;
+    margin: 1rem;
   }
 
   #img-portfio-card {
@@ -95,5 +96,44 @@
   .portfolio_card__text {
     text-align: left;
     margin: 0;
+  }
+}
+
+/* Styles for card within overlay */
+.overlay-project-card__content.portfolio_card {
+  margin: 0;
+  flex-direction: column;
+  width: auto;
+  max-width: 55rem;
+}
+
+@media screen and (max-width: 768px) {
+  .overlay-project-card__content.portfolio_card {
+    padding: 1.5em 2em;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .overlay-project-card__content.portfolio_card #img-portfio-card {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .overlay-project-card__content.portfolio_card {
+    padding: 1em;
+    width: 100%;
+  }
+
+  .overlay-project-card__content.portfolio_card .portfolio_card__title {
+    font-size: 1.3rem;
+  }
+
+  .overlay-project-card__content.portfolio_card .portfolio_card__button {
+    font-size: 1rem;
+    width: 8rem;
   }
 }

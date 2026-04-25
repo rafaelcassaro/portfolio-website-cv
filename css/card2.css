@@ -1,0 +1,24 @@
+/* -------------------------CARD EXPANSAO------------------------*/
+
+#img-portfio-card2 {
+  width: 25rem;
+  height: 25rem;
+  border: 1px solid var(--color-secundary);
+}
+
+
+@media screen and (max-width: 1070px) {
+  #img-portfio-card2 {
+    width: 15rem;
+    height: 15rem;
+    align-self: center;
+  }
+}
+
+/* @media screen and (max-width: 690px) {
+  #img-portfio-card2 {
+    width: 160px;
+    height: auto;
+  }
+ 
+} */

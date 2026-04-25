@@ -2,19 +2,17 @@ import portfolioData from "../mocks/portfolioCards.js";
 
 // Seleciona os elementos do overlay
 const overlay = document.getElementById('overlay-project-card');
-const overlayImg = document.getElementById('overlay-img');
+const overlayContent = document.querySelector(".testeov");
 const closeBtn = document.getElementById('overlay-close-btn');
-const testeov = document.querySelector(".testeov");
 
 // Seleciona todas as imagens dos projetos principais
 const projectImages = document.querySelectorAll('.main_projects__img');
 
 // Função para abrir o overlay
 function openOverlay(imageSrc) {
- // overlayImg.src = imageSrc;
   overlay.classList.remove('hidden');
   document.body.style.overflow = 'hidden'; // Previne scroll
-  testeov.innerHTML = createOverlayCardHTML(imageSrc, portfolioData);
+  overlayContent.innerHTML = createOverlayCardHTML(imageSrc, portfolioData);
 }
 
 // Função para fechar o overlay

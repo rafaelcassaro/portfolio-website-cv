@@ -6,6 +6,7 @@
 @import url(./css/technologies.css);
 @import url(./css/portfolio.css);
 @import url(./css/card.css);
+@import url(./css/card2.css);
 @import url(./css/navBar.css);
 @import url(./css/footer.css);
 @import url(./css/mainProjects.css);
@@ -33,6 +34,7 @@ body {
   font-family: var(--font-secundary);
   box-sizing: border-box;
   color: var(--color-secundary);
+  width: 100%;
   
 }
 

@@ -1,11 +1,11 @@
-.main_projects__container{
+.main_projects__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80vh;
 }
 
-.main_projects__img{
+.main_projects__img {
     width: 30%;
     height: auto;
     border: 1px solid #000000;
@@ -13,3 +13,19 @@
     cursor: pointer;
     pointer-events: auto;
 }
+
+
+@media screen and (max-width: 768px) {
+    .main_projects__container {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .main_projects__img {
+        width: 80%;
+    }
+}
+
+
