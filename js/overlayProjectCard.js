@@ -2,7 +2,7 @@ import portfolioData from "../mocks/portfolioCards.js";
 
 // Seleciona os elementos do overlay
 const overlay = document.getElementById('overlay-project-card');
-const overlayContent = document.querySelector(".testeov");
+const overlayContent = document.querySelector(".overlay_Content");
 const closeBtn = document.getElementById('overlay-close-btn');
 
 // Seleciona todas as imagens dos projetos principais

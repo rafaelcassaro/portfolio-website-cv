@@ -6,7 +6,7 @@ navOptions.forEach((option, index) => {
     //Como o HTML possui duas listas de navs após metade do array navOptions
     // é necesserio fazer um contador diminutivo para selecionar a section correta
     //pois a varivael sections possui metade do tamanho de navOptions 
-    if (index > 4) {
+    if (index > 3) {
         count++;
         option.addEventListener('click', (evento) => {
             evento.preventDefault();
@@ -38,7 +38,6 @@ navOptions.forEach((option, index) => {
 const navShow = document.querySelector(".github-icon");
 const posY = navShow.getBoundingClientRect().top;
 //-------nav-anchors-text-----------
-const navAbout = document.getElementById("nav-about");
 const navTech = document.getElementById("nav-technologies");
 const navPort = document.getElementById("nav-portfolio");
 const navContact = document.getElementById("nav-contact");
@@ -49,16 +48,12 @@ const navContact = document.getElementById("nav-contact");
 
 
 //----sections-height-length-----------------------
-const aboutSection = document.querySelector(".about_me")
-const technologiesSection = document.querySelector(".technologies")
-const portfolioSection = document.querySelector(".portfolio")
+const mainProjectSection = document.querySelector(".main_projects-nav")
+const portfolioSection = document.querySelector(".portfolio-nav")
 const contactSection = document.querySelector(".footer_contact")
 
-const aboutTop = aboutSection.getBoundingClientRect().top;
-const aboutBottom = aboutSection.getBoundingClientRect().bottom;
-
-const techSecTop = technologiesSection.getBoundingClientRect().top;
-const techSecBottom = technologiesSection.getBoundingClientRect().bottom;
+const mainProjectTop = mainProjectSection.getBoundingClientRect().top;
+const mainProjectBottom = mainProjectSection.getBoundingClientRect().bottom;
 
 const portfolioTop = portfolioSection.getBoundingClientRect().top;
 const portfolioBottom = portfolioSection.getBoundingClientRect().bottom;
@@ -70,20 +65,14 @@ const contactBottom = contactSection.getBoundingClientRect().bottom;
 window.addEventListener('scroll', () => {
     const stickyElement = this.document.querySelector(".navigation");
     //console.log(window.scrollY);
-
+    
     if (window.scrollY > posY) {
         stickyElement.style.display = 'grid';
     } else if (window.scrollY < posY) {
         stickyElement.style.display = 'none';
     }
     //-------------
-    if (window.scrollY >= aboutTop - 220 && window.scrollY < aboutBottom) {
-        navAbout.style.color = "var(--color-primary)";
-    } else {
-        navAbout.style.color = "var(--color-secundary)";
-    }
-
-    if (window.scrollY >= techSecTop - 100 && window.scrollY < techSecBottom - 100) {
+    if (window.scrollY >= mainProjectTop - 340  && window.scrollY < mainProjectBottom - 140) {
         navTech.style.color = "var(--color-primary)";
     } else {
         navTech.style.color = "var(--color-secundary)";
