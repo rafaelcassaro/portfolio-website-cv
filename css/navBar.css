@@ -1,15 +1,17 @@
 .navigation {
   display: grid;
+  grid-template-columns: 1fr auto;
   width: 100%;
   position: fixed;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
-  background-color: var(--white);
+  box-shadow: var(--shadow-soft);
+  background-color: var(--surface-nav);
   padding: 1.2em 1.5em;
   z-index: 3;
 }
 
 .navigation__anchors {
   display: flex;
+  align-items: center;
   margin-left: auto;
   padding-right: 5rem;
   gap: 2rem;
@@ -17,9 +19,43 @@
 
 .navigation__anchors-link {
   text-decoration: none;
-  color: var(--color-secundary);
+  color: var(--color-text);
   font-weight: 600;
   padding: 0 0.3rem;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 3.25rem;
+  height: 1.75rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 999px;
+  background-color: var(--surface-section);
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--surface-section);
+}
+
+.theme-toggle__icon {
+  position: absolute;
+  top: 50%;
+  left: 0.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  transform: translateY(-50%);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon {
+  transform: translate(1.45rem, -50%);
+  box-shadow: -0.32rem -0.12rem 0 0 var(--surface-section);
 }
 
 .desktop_screen {
@@ -40,9 +76,11 @@
   }
 
   .navigation__hamburguer_menu {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--surface-nav);
   }
 
   .hamburguer_icon {
@@ -50,18 +88,21 @@
     width: 55px;
     height: auto;
     background-repeat: no-repeat;
-    float: left;
   }
 
   .navigation__anchors {
     position: absolute;
     top: 100%;
-    background-color: aliceblue;
+    background-color: var(--surface-menu);
     flex-direction: column;
     margin-left: 0;
 
     width: auto;
     padding: 1rem;
+  }
+
+  .navigation__hamburguer_menu > .theme-toggle {
+    margin-right: 1rem;
   }
 
   .hamb-close {

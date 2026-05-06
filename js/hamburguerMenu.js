@@ -3,6 +3,8 @@ const menuList = document.querySelector("#lista");
 const section = document.querySelectorAll('section');
 const menuOptions = document.querySelectorAll(".navigation__anchors-link");
 
+const savedTheme = localStorage.getItem("theme");
+savedTheme === "dark" ? hamburguerIcon.src = './imgs/menuham2.png' : hamburguerIcon.src = './imgs/menuham2-light.png';
 let menuOpen = false;
 
 
@@ -22,7 +24,6 @@ menuOptions.forEach((element) => {
 //trade picture when menu is closed
 function nonSelectedMenuHamb() {
     menuOpen = false;
-    hamburguerIcon.src = './imgs/menuham2.png'
     menuList.classList.add("hamb-close")
 }
 
@@ -32,6 +33,7 @@ function toggleMenu() {
 }
 
 function tradeMenu() {
+    const savedTheme = localStorage.getItem("theme");
     console.log(menuOpen);
     if (!menuOpen) {
         hamburguerIcon.src = './imgs/menuham1.png'
@@ -39,6 +41,6 @@ function tradeMenu() {
     }
     else {
         menuOpen = false;
-        hamburguerIcon.src = './imgs/menuham2.png'
+        savedTheme === "dark" ? hamburguerIcon.src = './imgs/menuham2.png' : hamburguerIcon.src = './imgs/menuham2-light.png';
     }
 }

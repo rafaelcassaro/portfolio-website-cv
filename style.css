@@ -15,13 +15,47 @@
   --color-primary: #0bceaf;
   --color-secundary: #0e0e0e;
   --color-tertiary: #0bceaf;
+  --color-text: #0e0e0e;
+  --color-muted: #324054;
+  --color-border: #0e0e0e;
   --grey: #101828;
   --blue: #002f52;
   --strong-green: #09b89b;
   --white: #fdfdfd;
   --presentation: #ffffff;
+  --surface-page: #ffffff;
+  --surface-section: #f0f0f0;
+  --surface-card: #ffffff;
+  --surface-nav: #fdfdfd;
+  --surface-menu: #f0f8ff;
+  --button-text: #ffffff;
+  --button-hover-bg: #ffffff;
+  --button-hover-text: #0bceaf;
+  --shadow-soft: 0px 6px 6px rgba(0, 0, 0, 0.25);
   --font: "Krona One", sans-serif;
   --font-secundary: "Montserrat", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  --color-primary: #27e6c7;
+  --color-secundary: #f5f7fb;
+  --color-tertiary: #07584e;
+  --color-text: #f5f7fb;
+  --color-muted: #c7d0dd;
+  --color-border: #273648;
+  --strong-green: #27e6c7;
+  --white: #fdfdfd;
+  --presentation: #071816;
+  --surface-page: #0b1118;
+  --surface-section: #111b26;
+  --surface-card: #162231;
+  --surface-nav: #0f1721;
+  --surface-menu: #111b26;
+  --button-text: #071816;
+  --button-hover-bg: #0f1721;
+  --button-hover-text: #27e6c7;
+  --shadow-soft: 0px 8px 20px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
 }
 
 h1,
@@ -33,9 +67,10 @@ body {
   font-size: 16px;
   font-family: var(--font-secundary);
   box-sizing: border-box;
-  color: var(--color-secundary);
+  color: var(--color-text);
+  background-color: var(--surface-page);
   width: 100%;
-  
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .screen_size {
@@ -48,8 +83,8 @@ a {
 }
 
 button:hover {
-  color: black;
-  background-color: white;
+  color: var(--surface-page);
+  background-color: var(--white);
   transition: all 0.6s;
 }
 

@@ -17,14 +17,14 @@
 }
 
 .technologies__list {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--color-border);
   padding-left: 1em;
   margin-right: 5em;
   display: block;
 }
 
 .technologies__list__title {
-  color: var(--color-secundary);
+  color: var(--color-text);
   font-size: 1.6rem;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .technologies__list__name {
-  color: var(--color-secundary);
+  color: var(--color-text);
   text-decoration: none;
   margin-left: 0.6em;
   font-size: 1.1rem;
