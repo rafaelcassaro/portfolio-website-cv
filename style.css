@@ -12,15 +12,15 @@
 @import url(./css/mainProjects.css);
 
 :root {
-  --color-primary: #0bceaf;
+  --color-primary: #f9bf43b0;
   --color-secundary: #0e0e0e;
-  --color-tertiary: #0bceaf;
+  --color-tertiary: #f9bf4352;
   --color-text: #0e0e0e;
   --color-muted: #324054;
   --color-border: #0e0e0e;
   --grey: #101828;
   --blue: #002f52;
-  --strong-green: #09b89b;
+  --strong-green: #f9bf43b0;
   --white: #fdfdfd;
   --presentation: #ffffff;
   --surface-page: #ffffff;
@@ -30,20 +30,20 @@
   --surface-menu: #f0f8ff;
   --button-text: #ffffff;
   --button-hover-bg: #ffffff;
-  --button-hover-text: #0bceaf;
-  --shadow-soft: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  --button-hover-text: #f9bf43b0;
+  --shadow-soft: 0px 8px 20px rgba(0, 0, 0, 0.356);
   --font: "Krona One", sans-serif;
   --font-secundary: "Montserrat", sans-serif;
 }
 
 :root[data-theme="dark"] {
-  --color-primary: #27e6c7;
+  --color-primary: #F9C043;
   --color-secundary: #f5f7fb;
-  --color-tertiary: #07584e;
+  --color-tertiary: #111b26;
   --color-text: #f5f7fb;
   --color-muted: #c7d0dd;
   --color-border: #273648;
-  --strong-green: #27e6c7;
+  --strong-green: #F9C043;
   --white: #fdfdfd;
   --presentation: #071816;
   --surface-page: #0b1118;
@@ -53,8 +53,8 @@
   --surface-menu: #111b26;
   --button-text: #071816;
   --button-hover-bg: #0f1721;
-  --button-hover-text: #27e6c7;
-  --shadow-soft: 0px 8px 20px rgba(0, 0, 0, 0.45);
+  --button-hover-text: #F9C043;
+  --shadow-soft: 0px 8px 20px rgba(255, 255, 255, 0.45);
   color-scheme: dark;
 }
 
@@ -97,7 +97,7 @@ p {
   text-align: center;
   color: var(--color-primary);
   font-size: 4rem;
-  margin: 6rem 0 4rem 0;
+  padding-top: 2rem;
 }
 
 .line_horizontal {
@@ -154,8 +154,9 @@ p {
 
 @media screen and (max-width: 650px) {
   .section-title {
-    margin: 3rem 0 2rem 0;
-    font-size: 3rem;
+    
+    padding: 3rem 0 2rem 0;
+    font-size: 2.5rem;
   }
 
   .portfolio__title {

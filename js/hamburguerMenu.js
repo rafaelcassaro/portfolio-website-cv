@@ -4,7 +4,7 @@ const section = document.querySelectorAll('section');
 const menuOptions = document.querySelectorAll(".navigation__anchors-link");
 
 const savedTheme = localStorage.getItem("theme");
-savedTheme === "dark" ? hamburguerIcon.src = './imgs/menuham2.png' : hamburguerIcon.src = './imgs/menuham2-light.png';
+savedTheme === "light" ? hamburguerIcon.src = './imgs/menuham2-light.png' : hamburguerIcon.src = './imgs/menuham2.png';
 let menuOpen = false;
 
 

@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background: linear-gradient(var(--color-tertiary) ,#007965); */
+  /* background: linear-gradient(var(--color-tertiary) ,#f9bf4394); */
 }
 
 .presentation_bk-color {
-  background-color: var(--color-tertiary);
+  /* background-color: #f9bf43c2; */
+  background: linear-gradient(var(--color-primary), #f9bf432f);
   transition: background-color 0.3s ease;
 }
 
@@ -97,9 +98,20 @@
   
   padding: 4px;
   cursor: pointer;
+  /* animation: grayscaleLoop 1.5s infinite alternate; */
 }
 
 
+
+/* @keyframes grayscaleLoop  {
+    from {
+        filter: grayscale(0%);
+    }
+
+    to {
+        filter: grayscale(100%);
+    }
+} */
 
 
 @media screen and (max-width: 910px) {

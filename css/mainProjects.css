@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 .main_projects__img {
@@ -14,18 +14,34 @@
     pointer-events: auto;
 }
 
+[data-theme="dark"] #main_projects-bk {
+    /* height: 100vh; */
+    background: linear-gradient(rgba(30, 48, 68, 0.7), rgba(30, 48, 68, 0.7)), url("../imgs/invertidasemhd.png") no-repeat;
+    /* background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1)), url("../imgs/imagem_hd.png") no-repeat; */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+ #main_projects-bk {
+    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1)), url("../imgs/original.png") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
 
 @media screen and (max-width: 768px) {
     .main_projects__container {
         flex-direction: column;
         gap: 2rem;
         height: auto;
-        margin-bottom: 2rem;
+        padding-bottom: 2rem;
     }
 
     .main_projects__img {
-        width: 80%;
+        width: 65%;
     }
 }
-
-
