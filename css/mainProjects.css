@@ -8,10 +8,11 @@
 .main_projects__img {
     width: 30%;
     height: auto;
-    border: 1px solid var(--color-border);
+    border: 3px solid var(--color-primary);
     transition: transform 0.3s ease;
     cursor: pointer;
     pointer-events: auto;
+    border-radius: 10px;
 }
 
 [data-theme="dark"] #main_projects-bk {

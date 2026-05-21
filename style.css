@@ -98,6 +98,8 @@ p {
   color: var(--color-primary);
   font-size: 4rem;
   padding-top: 2rem;
+  /* text-shadow:    0 0 4px var(--color-primary); */
+    -webkit-text-stroke: 2px var(--color-secundary);
 }
 
 .line_horizontal {
