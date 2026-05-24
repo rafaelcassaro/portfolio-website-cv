@@ -15,6 +15,11 @@
     border-radius: 10px;
 }
 
+.main_projects__img:hover {
+    transform: translateY(-10px);
+}
+
+
 [data-theme="dark"] #main_projects-bk {
     /* height: 100vh; */
     background: linear-gradient(rgba(30, 48, 68, 0.7), rgba(30, 48, 68, 0.7)), url("../imgs/invertidasemhd.png") no-repeat;
